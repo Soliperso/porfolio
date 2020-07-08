@@ -1,0 +1,243 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #000;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --primary-color: rgb(23,24,25);
+  --secondary-color: rgb(73, 141, 230);
+  --text-color: rgb(211, 211, 211);
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  height: 100vh;
+  margin: 0;
+}
+
+/************** Navigation ****************/
+nav {
+  z-index: 10;
+  width: 100%;
+  position: fixed;
+  top: 0; 
+  left: 0;
+  background-color: var(--primary-color);
+  padding: 5px;
+  border-bottom: 3px outset var(--secondary-color);
+}
+
+nav .brand a {
+  font-size: 1.1em; 
+  font-weight: 500;
+  color: var(--secondary-color);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: -35px;
+}
+
+ .menu {
+  display: flex;
+}
+
+.menu li {
+  margin-right: 15px;
+  font-size: 0.8em;
+  color: var(--secondary-color);
+}
+
+.menu a,
+main {
+  color:var(--text-color);
+}
+
+nav a {
+  text-decoration: none;
+  text-transform: uppercase; 
+  letter-spacing: 1px;
+}
+
+
+/**************** Header ******************/
+img {
+  margin-top: 65px;
+  height: 50vh;
+  width: 100%;
+  object-fit: cover;
+  filter: grayscale(40%);
+  position: relative;
+}
+
+img#my__picture {
+  width: 250px;
+  height: 350px;
+  border-radius: 50%;
+  margin: -400px auto 100px;
+  /* filter: grayscale(1) brightness(50%) contrast(90%); */
+}
+
+header {
+  height: 496px;
+}
+
+
+/**************** Main section ******************/
+main {
+  padding: 10px;
+  line-height: 30px;
+  letter-spacing: 1px;
+  font-weight: 200;
+  background-color: var(--primary-color);
+}
+
+main div {
+  padding: 20px 3px;
+  background-color: rgb(23,26,26);
+  margin: 50px 0;
+  border-radius: 7px;
+}
+
+main h2 {
+  margin-bottom: 0;
+  text-transform: uppercase;
+  font-size: 1em;
+  color: var(--secondary-color);
+  font-weight: 200; 
+  letter-spacing: 1px;
+}
+
+main p {
+  margin-top: 0;
+  font-size: 18px;
+}
+
+.portfolio_images {
+  margin-top: 10px;
+  width: 450px;
+  height: 250px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  border-radius: 7px; 
+  border: 1px solid var(--secondary-color);
+  float: left;
+  transition: .5s;
+}
+
+.portfolio_images:hover {
+  transform: scale(.98);
+  cursor: pointer;
+}
+
+#trivia_game {
+  float: right;
+}
+
+/**************** CSS horizontal rule ******************/
+hr {
+  padding-top: .1px; 
+  overflow: visible; /* For IE */
+  height: 30px;
+  border-style: solid;
+  border-color: var(--text-color);
+  border-width: 1px 0 0 0;
+  border-radius: 20px;
+  width: 200px;
+  margin-top: 70px;
+}
+hr::before { /* Not really supposed to work, but does */
+  display: block;
+  content: "";
+  height: 30px;
+  margin-top: -31px;
+  border-style: solid;
+  border-color: var(--text-color);
+  border-width: 0 0 1px 0;
+  border-radius: 20px;
+}
+
+/**************** Form ******************/
+fieldset {
+  width: 60%; 
+  border-radius: 5px;
+}
+
+fieldset > legend {
+  font-size: 1.2rem;
+}
+
+label, 
+input, 
+textarea {
+  width: 100%;
+}
+
+input {
+  padding: 10px 0;
+  margin-bottom: 10px;
+}
+
+input, 
+textarea {
+  border-radius: 5px;
+  background-color: rgb(55, 57, 61);
+  outline: none; 
+  color: var(--secondary-color);
+}
+
+legend {
+  border-color: rgb(55, 57, 61); 
+}
+
+textarea {
+  resize: none;
+}
+
+button {
+  padding: 5px 50px;
+  border: none; 
+  border-radius: 50px;
+  cursor: pointer;
+  color: var(--primary-color);
+  text-transform: uppercase;
+  background-color: var(--secondary-color);
+  margin-bottom: 20px;
+  outline: none;
+}
+
+small p {
+  font-size: 0.8rem;
+}
+
+iframe {
+  float: right;
+  background-color: #333;
+}
+
+/**************** Footer ******************/
+footer {
+  text-align: center;
+  text-transform: uppercase; 
+  letter-spacing: 1px; 
+  background-color: var(--primary-color);
+  padding: 15px; 
+  font-size: x-small;
+  color: var(--text-color);
+  border-top: 1px solid var(--secondary-color);
+}
+
+footer a {
+  padding-top: 5px;
+  line-height: 20px;
+  text-decoration: none;
+  color: white;
+  
+}
